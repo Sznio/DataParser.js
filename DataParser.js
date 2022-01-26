@@ -3,7 +3,7 @@ const EventEmitter = require("events");
 class DataParser extends EventEmitter {
       buf = "";
       words = new Array();
-      count = 0;
+     
       streamWordsArray = () => {
             this.emit("data", this.words);
             this.words = [];
