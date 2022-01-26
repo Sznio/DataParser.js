@@ -31,7 +31,6 @@ class DataParser extends EventEmitter {
                   this.buf != "\t"
             ) {
                   this.words.push(this.buf);
-                  this.streamWordsArray();
             }
             this.emit("end", this.words);
       };
