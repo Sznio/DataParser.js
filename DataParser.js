@@ -38,13 +38,8 @@ class DataParser extends EventEmitter {
       }
 
       parseLastData() {
-            if (
-                  this.buf.length &&
-                  this.buf != " " &&
-                  this.buf != "\n" &&
-                  this.buf != "\t"
-            ) {
-                  this.words.push(this.buf);
+            if (this.buf.length && this.buf.trim().length) {
+                  this.words.push(this.buf.trim());
             }
             this.emit("end", this.words);
       }
